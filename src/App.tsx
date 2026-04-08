@@ -44,21 +44,27 @@ export default function App() {
         'รายงานความสมบูรณ์ของระบบ ดีเอสจี วัน สำหรับกระบวนการเสนอขายกิจการ',
         'เป้าหมายเชิงกลยุทธ์ คือการเสนอขายหุ้น 80 เปอร์เซ็นต์ โดยผู้ก่อตั้งยังคงถือครอง 20 เปอร์เซ็นต์เพื่อมูลค่าในอนาคต',
         'สถาปัตยกรรมของระบบเป็นแบบ ฟอร์มัล คอนโทรล เพลน ซึ่งผ่านการพิสูจน์ทางคณิตศาสตร์ด้วย แซดทรี โซลเวอร์ ว่ามีความปลอดภัยสูงสุดในระดับ แซททิสไฟเอเบิล',
-        'ผลการทดสอบเชิงประจักษ์ ล่าสุด พบว่าผ่านการทดสอบ 85 จาก 86 รายการ คิดเป็น 98.8 เปอร์เซ็นต์',
-        'โดยข้อที่พลาดเพียง 1 รายการนั้น เกิดจากปัญหาเครือข่ายภายนอกในการดาวน์โหลดไฟล์ เพลย์ไรท์ ไม่ได้เกิดจากความผิดพลาดของแอปพลิเคชัน',
-        'ในส่วนของกลไกการควบคุม มัคแปด อาบิเตอร์ ได้ใช้หลักการ เอทโฟล พาธ เช่น ไรท์ วิว และ ไรท์ เอฟฟอร์ต เพื่อรับประกันว่าทุกการประมวลผลจะมีความถูกต้องแม่นยำ',
-        'ระบบยังมีเอนจินป้องกันความเสี่ยงอัตโนมัติ โดยมีการตั้งเกณฑ์ความเสี่ยงสูงสุดไว้ที่ 0.8 และมีระบบตรวจจับความผันผวนหากค่าความต่างเกิน 0.35 ระบบจะเข้าสู่โหมดรักษาเสถียรภาพทันที',
-        'ด้านเชิงพาณิชย์ ระบบรองรับการคิดเงินตามการใช้งานจริงผ่าน สไตรป์ และ อัปสแตช โดยแบ่งเป็น 4 ระดับ ตั้งแต่ ไทรอัล จนถึง เอนเตอร์ไพรส์',
+        'ดีเอสจี วัน ถูกสร้างขึ้นบนหลักการที่ว่า เมื่อเอไอเปลี่ยนจากเพียงแค่การสร้างข้อความ ไปสู่การทำงานจริงที่มีผลกระทบทางปฏิบัติ ระบบจะต้องเปลี่ยนจากกล่องดำ ไปสู่รันไทม์ที่สามารถควบคุมและตรวจสอบได้',
+        'ภารกิจหลักของเราคือการจัดหาอินเทอร์เฟซที่การทำงานของเอไอจะต้องมีความสามารถในการควบคุม ตรวจสอบ ทบทวน และป้องกันการทำซ้ำ',
+        'หลักการปฏิบัติ 5 ประการของเราประกอบด้วย: การควบคุมระดับรันไทม์, หลักฐานที่มองเห็นได้, การตรวจสอบที่ทำได้จริง, การมองเห็นของผู้ปฏิบัติงานแบบเรียลไทม์, และการแยกส่วนหลักฐาน',
+        'ระบบของเราประกอบด้วย 4 เสาหลัก ได้แก่ คอนโทรล เพลน, เกท คอร์, รันไทม์ เพลน, และ ออดิท เพลน',
+        'เรามีการแยกส่วนที่สำคัญระหว่าง หลักฐานสาธารณะ ซึ่งออกแบบมาเพื่อพันธมิตรและผู้ประเมินภายนอก และ หลักฐานรันไทม์ที่ได้รับการตรวจสอบ ซึ่งออกแบบมาสำหรับผู้ปฏิบัติงานภายในที่ได้รับอนุญาต',
+        'กระบวนการไหลของข้อมูลของเราติดตามคำขอการทำงานของเอไอ ตั้งแต่ต้นจนจบ เพื่อสร้างหลักฐานทั้งในรูปแบบสาธารณะและรูปแบบที่ตรวจสอบได้',
+        'ระบบของเราใช้แกนกลางที่ได้รับการตรวจสอบอย่างเป็นทางการ เพื่อปกป้องขอบเขตการตัดสินใจที่สำคัญ โดยตรวจสอบคุณสมบัติ 3 ประการ ได้แก่ ความเป็นกำหนดได้, ความปลอดภัยคงที่, และขอบเขตเวลาคงที่',
+        'ในส่วนของความเป็นจริงทางปฏิบัติ คอนโทรล เพลน ของเรายังจัดการเรื่องความสอดคล้องของธุรกรรม, การกำหนดขอบเขตองค์กร, และการตรวจสอบการคลาดเคลื่อนของการกำหนดค่า',
         'ข้อมูลทั้งหมดนี้สามารถตรวจสอบได้ผ่าน คาร์โนนิคอล แฮช และเลข อ้างอิง เซโนโด ที่ระบุไว้ในเอกสารครับ'
     ] : [
         'System integrity report for DSG ONE acquisition process.',
         'Strategic objective: 80 percent direct acquisition with 20 percent retained equity for future upside.',
         'Architecture: Formal Control Plane verified by Z3 Solver as Satisfiable for maximum security.',
-        'Empirical evidence: 85 out of 86 test cases passed, a 98.8 percent success rate.',
-        'The single failure was an external network issue during Playwright binary download, not an application bug.',
-        'The Makk8 Arbiter enforces Eightfold Path principles, including Right View and Right Effort, to ensure verifiable outcomes.',
-        'Risk gating is set at a 0.8 threshold with oscillation detection. If variance exceeds 0.35, the system stabilizes automatically.',
-        'Commercial ready: Real-time billing via Stripe and Upstash across four tiers, from Trial to Enterprise.',
+        'The DSG ONE product thesis is built on the principle that as AI moves from text generation to production workflows with real operational consequences, it must transition from a black box to a governable runtime.',
+        'The core mission is to provide an interface where AI execution is controllable, inspectable, reviewable, and replay-resistant.',
+        'Our five practical principles are: Runtime Control, Visible Evidence, Practical Auditability, Live Operator Visibility, and Proof Separation.',
+        'The system topology is built on four pillars: Control Plane, Gate Core, Runtime Plane, and Audit Plane.',
+        'We maintain a critical distinction between Public Proof Narrative for external evaluators and Verified Runtime Evidence for authenticated internal operators.',
+        'Our execution evidence pipeline traces every AI request to create both public and verified artifacts.',
+        'We use a Verified Formal Core to protect critical decision boundaries, ensuring determinism, safety invariance, and constant-time bounds.',
+        'Beyond formal logic, the Control Plane handles practical production realities like transactional consistency, org scoping, and configuration drift monitoring.',
         'All data is anchored by Canonical SHA-256 hashes and Zenodo reference DOIs as shown in the report.'
     ];
 
@@ -95,7 +101,7 @@ export default function App() {
                 <button onClick={speakFullReport} id="audioBtn" className={`flex items-center space-x-3 text-white px-4 py-2 rounded-full transition-all shadow-lg shadow-teal-900/20 ${isSpeaking ? 'bg-rose-600' : 'bg-teal-600 hover:bg-teal-500'}`}>
                     <span id="audioIcon" className="text-lg">{isSpeaking ? '■' : '▶'}</span>
                     <div id="waveContainer" className={`audio-wave ${isSpeaking ? '' : 'hidden'}`}>
-                        <div className="wave-1"></div><div class="wave-2"></div><div class="wave-3"></div>
+                        <div className="wave-1"></div><div className="wave-2"></div><div className="wave-3"></div>
                     </div>
                     <div className="text-left leading-tight">
                         <div className="text-[10px] opacity-80 uppercase font-bold">Full Report Audio</div>
@@ -179,6 +185,19 @@ export default function App() {
                     <a href="https://tdealer01-crypto-dsg-control-plane.vercel.app/enterprise-proof/report" target="_blank" className="text-indigo-600 text-[10px] font-bold underline">VIEW LIVE EVIDENCE REPORT</a>
                 </div>
             </div>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold border-l-4 border-teal-500 pl-4">
+            {isTh ? 'คำอธิบายระบบ' : 'System Explanation'}
+          </h2>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-slate-600 leading-relaxed">
+            {isTh ? (
+              <p>DSG ONE คือระบบ Agent Orchestration ที่มีรากฐานเป็นระบบควบคุมทางคณิตศาสตร์ (Formal Control Plane) ข้อมูลทั้งหมดในรายงานฉบับนี้เป็นข้อเท็จจริงที่ตรวจสอบได้จาก Codebase จริง ปราศจากการคาดเดา รายละเอียดดีลคือการเสนอขายหุ้น 80 เปอร์เซ็นต์ โดยผู้ก่อตั้งยังคงถือหุ้น 20 เปอร์เซ็นต์เพื่อมูลค่าในอนาคต ระบบผ่านการทดสอบ 85 จาก 86 รายการ โดยรายการที่พลาดเกิดจากปัจจัยภายนอกด้านเครือข่าย ไม่ใช่ข้อผิดพลาดของแอปพลิเคชัน</p>
+            ) : (
+              <p>DSG ONE is an Agent Orchestration platform built on a Formal Control Plane. Every piece of data in this report is verifiable truth extracted from the actual codebase, with zero fabrication. The proposed deal structure is an 80% acquisition, with the founder retaining 20% equity for future upside. The system passed 85 out of 86 test cases, with the single failure attributed to external network factors, not application logic.</p>
+            )}
+          </div>
         </section>
       </main>
     </div>
