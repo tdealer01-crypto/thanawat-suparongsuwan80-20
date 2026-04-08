@@ -5,6 +5,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import QRious from 'qrious';
+import RuntimeMonitor from './components/RuntimeMonitor';
 
 export default function App() {
   const [isTh, setIsTh] = useState(true);
@@ -185,6 +186,12 @@ export default function App() {
                     <a href="https://tdealer01-crypto-dsg-control-plane.vercel.app/enterprise-proof/report" target="_blank" className="text-indigo-600 text-[10px] font-bold underline">VIEW LIVE EVIDENCE REPORT</a>
                 </div>
             </div>
+        </section>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold border-l-4 border-teal-500 pl-4">
+            {isTh ? 'สถานะรันไทม์' : 'Runtime Status'}
+          </h2>
+          <RuntimeMonitor />
         </section>
 
         <section className="space-y-6">
